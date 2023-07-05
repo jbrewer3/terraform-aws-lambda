@@ -29,6 +29,12 @@ variable "lambda_runtime" {
   default     = "python3.9"
 }
 
+variable "timeout" {
+  description = "Time before function times out in seconds"
+  type        = number
+  default     = 900
+}
+
 variable "signing_profile_name" {
   description = "Name for the signing profile"
   type        = string

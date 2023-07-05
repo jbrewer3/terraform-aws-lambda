@@ -13,7 +13,7 @@ module "lambda" {
   description   = var.function_description
   handler       = var.function_handler
   runtime       = var.lambda_runtime
-
+  timeout       = var.timeout
   create_package = false
 
   local_existing_package = var.output_path
