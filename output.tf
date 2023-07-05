@@ -17,3 +17,8 @@ output "lambda_role_arn" {
   description = "The ARN of the IAM role created for the Lambda Function"
   value       = module.lambda.lambda_role_arn
 }
+
+output "timeout" {
+  description = "timeout of function"
+  value = module.lambda.timeout
+}
