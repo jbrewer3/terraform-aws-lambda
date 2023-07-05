@@ -18,7 +18,3 @@ output "lambda_role_arn" {
   value       = module.lambda.lambda_role_arn
 }
 
-output "timeout" {
-  description = "timeout of function"
-  value = module.lambda.timeout
-}
