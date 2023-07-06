@@ -71,6 +71,9 @@ data "archive_file" "lambda_archive_file" {
   output_path = var.output_path
 }
 
+### Time sleep and lambda invocation is used in this scenario only if you are deploying a eks cluster. This assumes that your ec2 instances would be deployed and SSM agent running by the time the cluster creates. 
+### At that time the function would execute to change the password for your instances shortly after creation. 
+
 # resource "time_sleep" "delay" {
 #   depends_on = [module.eks]
 
