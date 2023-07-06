@@ -41,12 +41,5 @@ variable "output_path" {
   default     = ""
 }
 
-# variable "policy_statements" {
-#   type = map(object({
-#     effect    = string
-#     actions   = list(string)
-#     resources = list(string)
-#     conditions = optional(map(string))
-#   }))
-# }
+
 
