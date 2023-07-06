@@ -1,3 +1,8 @@
+variable "region" {
+  description = "default region"
+  type = string
+  default = ""
+}
 
 variable "prefix-name" {
   description = "prefix to add to resources"

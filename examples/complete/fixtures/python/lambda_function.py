@@ -209,7 +209,7 @@ def create_instance_secrets(instance, passwords):
         }
         response = secrets_manager_client.describe_secret(SecretId=secret_name)
         secret_arn = response['ARN']
-        access_policy['Statement'][0]['Principal']['AWS'] = f"arn:aws-us-gov:iam::{account_id}:user/josh.brewer"
+        access_policy['Statement'][0]['Principal']['AWS'] = f"arn:aws-us-gov:iam::{account_id}:user/*"
         access_policy['Statement'][0]['Resource'] = secret_arn
 
         secrets_manager_client.put_resource_policy(
